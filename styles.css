@@ -1,0 +1,48 @@
+/* [class*= "col"]{
+    padding: 1rem;
+    background-color: #33b5e5;
+    border: 2px solid #fff;
+    color: #fff;
+}  */
+
+body{
+    background: #fdfdc4;     
+}
+
+.bg-first-color { 
+	background: #fdfdc4; 
+}
+	
+.bg-second-color { 
+	background: #ffe8cf;
+}
+
+.bg-third-color { 
+	background: #ffdede; 
+}
+
+.bg-fourth-color { 
+	background: #ccffec;
+}
+
+.bg-fifth-color{
+    background: #6A4C65;
+}
+
+.bg-sixth-color{
+    background: #e6c8d3;
+}
+
+.content{
+    height: 1000px; 
+    padding-top: 105px;
+}
+
+@media only screen and (max-width: 576px){
+    .img-logo {
+        width: 60px;
+    }
+    .content {
+        padding-top: 86px;
+    }
+}
