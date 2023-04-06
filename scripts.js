@@ -12,11 +12,24 @@ if (document.readyState == 'loading'){
 function settingup(){
     // sets up the specific add cart buttons we can interact with upon page load
     var addCartBtn = document.getElementsByClassName('btn-add')
-
     for(var i = 0; i < addCartBtn.length; i++){
         var addbutton = addCartBtn[i]
         addbutton.addEventListener('click', addToCartClick)
     }
+
+    var quantityInputs = document.getElementsByClassName('cart-item-amount')
+    for(var i = 0; i < quantityInputs.length; i++){
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
+}
+
+function quantityChanged(event) {
+    var input = event.target
+    if(isNaN(input.value) || input.value <= 0)   {
+        input.value = 1
+    }
+    updateCartTotal()
 }
 
 // use this to get the parent parent element of the child (the card itself) and get the image price and name of the item
@@ -34,7 +47,7 @@ function createIteminCart(title, price, imgSrc){
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('itemsInCart')[0]
 
-    var cartItemsNames = cartItems.getElementsByClassName('cart-iten-name')
+    var cartItemsNames = cartItems.getElementsByClassName('cart-item-name')
     for(var i = 0; i < cartItemsNames.length; i++){
         if(cartItemsNames[i].innerText == title) {
             alert('This item is already in the cart.')
@@ -50,7 +63,7 @@ function createIteminCart(title, price, imgSrc){
         <div class="col cart-item-name">${title}</div>
         <div class="col cart-item-price"> ${price} </div>
         <div class="col">
-            <input type="number" class="cart-item-amount" value="1" min="1" max="50" size="1">
+            <input type="number" class="cart-item-amount" value="1" max="50" size="1">
         </div>
     </div>
     `
