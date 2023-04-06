@@ -33,6 +33,10 @@ h5{
     color: #DEB80B;
 }
 
+.dropdown-menu{
+    min-width: 20rem !important;
+}
+
 @media only screen and (max-width: 576px) {
     .w-75{
         width: 100% !important;
