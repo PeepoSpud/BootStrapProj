@@ -3,34 +3,22 @@
 
 // console.log(addCartBtn)
 // });
-if (document.readyState == 'loading'){
+if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', settingup)
-} else{
+} else {
     settingup()
 }
 
-function settingup(){
+function settingup() {
     // sets up the specific add cart buttons we can interact with upon page load
     var addCartBtn = document.getElementsByClassName('btn-add')
-    for(var i = 0; i < addCartBtn.length; i++){
+    for (var i = 0; i < addCartBtn.length; i++) {
         var addbutton = addCartBtn[i]
         addbutton.addEventListener('click', addToCartClick)
     }
 
-    var quantityInputs = document.getElementsByClassName('cart-item-amount')
-    for(var i = 0; i < quantityInputs.length; i++){
-        var input = quantityInputs[i]
-        input.addEventListener('change', quantityChanged)
-    }
 }
 
-function quantityChanged(event) {
-    var input = event.target
-    if(isNaN(input.value) || input.value <= 0)   {
-        input.value = 1
-    }
-    updateCartTotal()
-}
 
 // use this to get the parent parent element of the child (the card itself) and get the image price and name of the item
 function addToCartClick(event) {
@@ -42,14 +30,14 @@ function addToCartClick(event) {
     createIteminCart(itemName, itemCost, itemImage)
 }
 
-function createIteminCart(title, price, imgSrc){
+function createIteminCart(title, price, imgSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('itemsInCart')[0]
 
     var cartItemsNames = cartItems.getElementsByClassName('cart-item-name')
-    for(var i = 0; i < cartItemsNames.length; i++){
-        if(cartItemsNames[i].innerText == title) {
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
             alert('This item is already in the cart.')
             return
         }
@@ -72,15 +60,15 @@ function createIteminCart(title, price, imgSrc){
     updateCartTotal()
 }
 
-function updateCartTotal(){
+function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('itemsInCart')[0]
     cartRows = cartItemContainer.getElementsByClassName('cart-row')
     total = 0
-    for(var i = 0; i< cartRows.length; i++) {
+    for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-item-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-item-amount')[0]
-        var price = parseFloat(priceElement.innerText.replace('$',''))
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
         console.log(price * quantity)
         total = total + (price * quantity)
