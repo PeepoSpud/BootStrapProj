@@ -1,78 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Fixed Top Navbar that changes to canvas scrolls to section upon clicking it-->
-    <header class="navbar navbar-expand-lg fixed-top bg-third-color">
-        <div class="container-md">
-            <a class="navbar-brand" href="/index.html">
-                <img src="/png/logo-no-background.png" class="img-logo" alt="" width="60px">
+    <header class="navbar navbar-expand-md fixed-top bg-third-color">
+        <div class="container">
+            <a class="navbar-brand p-0 me-5" href="/index.html">
+                <img src="/png/logo-no-background.png" class="img-logo" alt="" width="70px">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>          
-            
-            <div class="offcanvas offcanvas-end bg-second-color" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            </button>
+
+            <div class="offcanvas offcanvas-end bg-second-color" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>            
+                </div>
 
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <a class="nav-link" href="#About">About</a>
+                            <a class="nav-link ms-1 me-5" href="#About">About</a>
                         </li>
                         <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <a class="nav-link" href="#Features">Features</a>
+                            <a class="nav-link ms-1 me-5" href="#Features">Features</a>
                         </li>
                         <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <a class="nav-link" href="#Pricing">Pricing</a>
+                            <a class="nav-link ms-1 me-5" href="#Pricing">Pricing</a>
                         </li>
                     </ul>
                 </div>
-            </div>          
+            </div>
         </div>
     </header>
 
 
     <!-- Simple section that contains surface information about a Passion Fruit: Probably use a carousel for this? -->
-            <div class="content container-md" id="About">
-                <div class="row bg-second-color">
-                    <h1> About </h1>
-                    <div class="col border">1</div>
-                    <div class="col border">2</div>
-                    <div class="col border">3</div>
+    <div class="content container bg-second-color" id="About">
+        <div class="row bg-fourth-color mb-5">
+            <h1>About</h1>
+        </div>
+
+        <div class="row bg-first-color justify-content-center">
+            <div class="col p-0">
+                <div id="factslide" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#factslide" data-bs-slide-to="0" class="active"
+                            aria-label="slide 1"></button>
+                        <button type="button" data-bs-target="#factslide" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#factslide" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#factslide" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="png/Passion1.jpg" class="d-block custom-img-size mx-auto" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Fact 1</h3>
+                                <p>Hello</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="png/passion2.jpg" class="d-block custom-img-size mx-auto" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Fact 2</h3>
+                                <p>Hello</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="png/passion3.jpg" class="d-block custom-img-size mx-auto" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Fact 3</h3>
+                                <p>Hello</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="png/passion4.jpg" class="d-block custom-img-size mx-auto" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Fact 4</h5>
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#factslide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#factslide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
                 </div>
             </div>
-            
+        </div>
+    </div>
+
     <!-- Try to create a fun animation that displays the anatomy of a Passion Fruit -->
-            <div class="content container-md" id="Features">
-                <div class="row bg-sixth-color">
-                    <h1> Features </h1>
-                </div>
-            </div>
+    <div class="content container" id="Features">
+        <div class="row bg-sixth-color">
+            <h1> Features </h1>
+        </div>
+    </div>
 
     <!-- Use cards to sell different Passion Fruits? Maybe add in a cart as well -->
-            <div class="content container-md" id="Pricing">
-                <div class="row bg-fourth-color">
-                    <h1> Pricing </h1>
-                </div>
-            </div>
+    <div class="content container" id="Pricing">
+        <div class="row bg-fourth-color">
+            <h1> Pricing </h1>
+        </div>
+    </div>
 
-            
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <!-- <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
 </body>
+
 </html>
