@@ -39,6 +39,7 @@ function createIteminCart(title, price, imgSrc) {
     for (var i = 0; i < cartItemsNames.length; i++) {
         if (cartItemsNames[i].innerText == title) {
             alert('This item is already in the cart.')
+            updateCartTotal()
             return
         }
     }
@@ -70,7 +71,6 @@ function updateCartTotal() {
         var quantityElement = cartRow.getElementsByClassName('cart-item-amount')[0]
         var price = parseFloat(priceElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
-        console.log(price * quantity)
         total = total + (price * quantity)
     }
     document.querySelector('.cart-total').innerText = "$" + total
