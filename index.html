@@ -15,7 +15,7 @@
 <body>
 
     <!-- Fixed Top Navbar that changes to canvas scrolls to section upon clicking it-->
-    <header class="navbar navbar-expand-md fixed-top bg-third-color">
+    <header class="navbar navbar-expand-md fixed-top bg-first-color">
         <div class="container">
             <a class="navbar-brand p-0 me-5" href="/index.html">
                 <img src="/png/logo-no-background.png" class="img-logo" alt="" width="70px">
@@ -51,8 +51,8 @@
 
 
     <!-- Simple section that contains surface information about a Passion Fruit: Probably use a carousel for this? -->
-    <div class="content container bg-second-color" id="About">
-        <div class="row bg-fifth-color justify-content-center">
+    <section class="content container-fluid bg-second-color" id="About">
+        <div class="row bg-third-color justify-content-center">
             <div class="col p-0">
                 <div id="factslide" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -88,11 +88,13 @@
                         </div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#factslide" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#factslide"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#factslide" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#factslide"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -100,21 +102,56 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row text-center mt-5">
+            <h1>About</h1>
+        </div>
+        <div class="row text-center m-5 pb-5">
+            <div class="col-md-6">
+                <img class="mx-auto rounded w-50 d-block m-5" src="png/Flag-of-Brazil-01-1.svg" alt="">
+                <h3>Fact #1</h3>
+                <p>Native to Brazil the Passion Fruit's name comes from a family of passion flowers (passiflora).
+                In Portuguese it's called “maracujá,” after an Native American word which is not so pleasant.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="mx-auto rounded w-50 d-block m-5" src="png/passion7.jpg" alt="">
+                <h3>Fact #2</h3>
+                <p>Technically it’s a berry and one fruit has only 17 calories. The dark seeds are crunchy but edible. 
+                The berry is a source of vitamins A, C and B complex and has minerals as well: iron, sodium, calcium and phosphorous.</p>
+            </div>                      
+        </div>
+        <div class="row text-center m-5 pb-5">
+            <div class="col-md-6">
+                <img class="mx-auto rounded w-50 d-block m-5" src="png/passion5.jpg" alt="">
+                <h3>Fact #3</h3>
+                <p>It’s served either sweet or sour. The most popular varieties are purple and yellow.
+                 Purple ones are smaller but sweeter and are more commonly found here in the US. Yellow ones are more sour and larger and they’re Brazilians’ favorite.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="mx-auto rounded w-50 d-block m-5" src="png/passion6.jpg" alt="">
+                <h3>Fact #4</h3>
+                <p>It’s known to have calming properties and it’s used as a sleeping aid, to calm nerves and relieve anxiety. 
+                So if you’re feeling edgy, try it for a few days and see.</p>
+            </div>  
+        </div>
+
+
+
+
+    </section>
 
     <!-- Try to create a fun animation that displays the anatomy of a Passion Fruit -->
-    <div class="content container" id="Features">
-        <div class="row bg-sixth-color">
+    <section class="content container-fluid" id="Features">
+        <div class="row bg-first-color">
             <h1> Features </h1>
         </div>
-    </div>
+    </section>
 
     <!-- Use cards to sell different Passion Fruits? Maybe add in a cart as well -->
-    <div class="content container" id="Pricing">
+    <section class="content container-fluid" id="Pricing">
         <div class="row bg-fourth-color">
             <h1> Pricing </h1>
-        </div>
-    </div>
+        </div>  
+    </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"

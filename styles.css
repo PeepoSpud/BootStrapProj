@@ -5,32 +5,24 @@
     color: #fff;
 }  */
 
-body{
-    background: #fdfdc4;     
-}
-
 .bg-first-color { 
-	background: #fdfdc4; 
+	background: #F4A3B4; 
 }
 	
 .bg-second-color { 
-	background: #ffe8cf;
+	background: #F4DDDF;
 }
 
 .bg-third-color { 
-	background: #ffdede; 
+	background: #7C2142; 
 }
 
 .bg-fourth-color { 
-	background: #ccffec;
+	background: #DEB80B;
 }
 
 .bg-fifth-color{
-    background: #6A4C65;
-}
-
-.bg-sixth-color{
-    background: #e6c8d3;
+    background: #5F5935;
 }
 
 .content{
