@@ -34,19 +34,12 @@ body{
 }
 
 .content{
-    height: 1000px; 
     padding-top: 86px;
 }
 
-.custom-img-size{
-    width: 800px;
-    height: 400px;
-}
-
-@media only screen and (max-width: 768px) {
-    .custom-img-size{
-        width: 400px;
-        height: 200px;
+@media only screen and (max-width: 576px) {
+    .w-75{
+        width: 100% !important;
     }
 }
 
